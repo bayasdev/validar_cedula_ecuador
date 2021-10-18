@@ -1,6 +1,9 @@
 # Función que valida si una CI ecuatoriana es válida
 # 2021 Victor Bayas
 
+import math
+
+
 def validar_cedula(cedula):
     longitud = len(cedula)
     # Validar que la CI contenga exactamente 10 dígitos
@@ -19,10 +22,13 @@ def validar_cedula(cedula):
                     # Si una multiplicación es >= 10 se le debe restar 9
                     if multip >= 10:
                         multip -= 9
-                    # print(f'Digito {int(cedula[i])}, multiplicacion {multip}')
+                    print(f'Digito {int(cedula[i])}, multiplicacion {multip}')
                     suma += multip
-                decena_superior = round(suma/10.)*10  # calculamos la decena superior de la suma
+                decena_superior = suma - (suma % 10) + 10  # calculamos la decena superior de la suma
                 resta = decena_superior - suma  # calculamos el último digito según la suma menos decena superior
+                print(suma)
+                print(decena_superior)
+                print(resta)
                 # Validar que el resultado de la resta y el dígito validador sean iguales
                 if resta == validador:
                     print(f'La cédula {cedula} es válida')
