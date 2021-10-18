@@ -31,9 +31,9 @@ def validar_cedula(cedula):
             else:
                 print('El tercer dígito no es válido')
         else:
-            print('El código de provincia no válido')
+            print('El código de provincia no es válido')
     else:
-        print('El número de cédula debe tener 10 dígitos')
+        print('Un número de cédula debe tener 10 dígitos')
 
 
 # Uso: validar_cedula(nro_cedula), pasar valor como un string
