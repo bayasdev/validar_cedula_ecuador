@@ -25,9 +25,9 @@ def validar_cedula(cedula):
                 resta = decena_superior - suma  # calculamos el último digito según la suma menos decena superior
                 # Validar que el resultado de la resta y el dígito validador sean iguales
                 if resta == validador:
-                    print('La cédula es válida')
+                    print(f'La cédula {cedula} es válida')
                 else:
-                    print('La cédula no es válida')
+                    print(f'La cédula {cedula} no es válida')
             else:
                 print('El tercer dígito no es válido')
         else:
@@ -36,5 +36,6 @@ def validar_cedula(cedula):
         print('El número de cédula debe tener 10 dígitos')
 
 
-# Uso: validar_cedula('nro_cedula'), pasar valor como un string
-validar_cedula('9999999999')
+# Uso: validar_cedula(nro_cedula), pasar valor como un string
+nro_cedula = input('Ingrese un número de cédula: ')
+validar_cedula(nro_cedula)
