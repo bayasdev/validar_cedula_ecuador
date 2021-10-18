@@ -1,9 +1,6 @@
 # Función que valida si una CI ecuatoriana es válida
 # 2021 Victor Bayas
 
-import math
-
-
 def validar_cedula(cedula):
     longitud = len(cedula)
     # Validar que la CI contenga exactamente 10 dígitos
