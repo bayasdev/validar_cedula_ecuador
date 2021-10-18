@@ -22,13 +22,11 @@ def validar_cedula(cedula):
                     # Si una multiplicación es >= 10 se le debe restar 9
                     if multip >= 10:
                         multip -= 9
-                    print(f'Digito {int(cedula[i])}, multiplicacion {multip}')
+                    # print(f'Digito {int(cedula[i])}, multiplicacion {multip}')
                     suma += multip
                 decena_superior = suma - (suma % 10) + 10  # calculamos la decena superior de la suma
                 resta = decena_superior - suma  # calculamos el último digito según la suma menos decena superior
-                print(suma)
-                print(decena_superior)
-                print(resta)
+                print(f'\nSuma: {suma}\nDecena superior: {decena_superior}\nResta: {resta}\nValidador: {validador}\n')
                 # Validar que el resultado de la resta y el dígito validador sean iguales
                 if resta == validador:
                     print(f'La cédula {cedula} es válida')
