@@ -9,8 +9,8 @@ def validar_cedula(cedula):
     # Validar que la CI contenga exactamente 10 dígitos
     if longitud == 10:
         provincia = int(cedula[0:2])  # dos primeros dígitos de la CI
-        # Validar provincia (1-24)
-        if 1 <= provincia <= 24:
+        # Son válidas las provincias del 1 al 24 (o 30 en el caso de los ecuatorianos nacidos en el extranjero)
+        if 1 <= provincia <= 24 or provincia == 30:
             tercer_digito = int(cedula[2])
             # El tercer dígito debe estar entre 0 y 6
             if 0 <= tercer_digito <= 6:
